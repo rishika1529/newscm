@@ -1,15 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates — Rishika</title>
+    <link rel="stylesheet" href="css/style.css">
 
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Certificates — Rishika</title>
-<link rel="stylesheet" href="css/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-<style>.wrap{width:80%;margin:140px auto}.grid{display:grid;gap:30px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:26px}.card{padding:16px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.03)}</style>
-</head><body>
-<header class="nav"><div class="brand">Rishika<span class="dot">.</span></div>
-<nav class="menu"><a href="index.html">Home</a><a href="index2.html">Projects</a><a href="certificates.html">Certificates</a></nav></header>
-<div class="wrap"><h1 class="title" style="font-size:3.2rem;">Certificates</h1>
-<p class="subtle">Add JPG/PNG/PDFs into the <code>/certificates</code> folder and duplicate the cards.</p>
-<div class="grid"><div class="card"><img src="certificates/cert1.jpg" alt="Certificate"><br><a href="certificates/cert1.jpg" target="_blank">→ View</a></div></div></div>
-<footer class="footer">© 2025 Rishika Sharma</footer>
-</body></html>
+    <style>
+        .cert-page {
+            width: 80%;
+            margin: 120px auto;
+        }
+
+        .cert-title {
+            font-size: 3.5rem;
+            font-family: "Playfair Display", serif;
+            margin-bottom: 10px;
+        }
+
+        .cert-sub {
+            color: var(--muted);
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            gap: 40px;
+        }
+
+        .cert-card {
+            border: 1px solid var(--border);
+            padding: 28px;
+            border-radius: 18px;
+            transition: 0.35s ease;
+            cursor: pointer;
+            background: rgba(255,255,255,0.02);
+        }
+
+        .cert-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent);
+            background: rgba(255,255,255,0.05);
+        }
+
+        .cert-title-text {
+            font-family: "Playfair Display", serif;
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            color: var(--fg);
+        }
+
+        .cert-org {
+            font-size: 0.95rem;
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .cert-btn {
+            padding: 10px 20px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--fg);
+            border-radius: 12px;
+            font-size: 0.9rem;
+            transition: 0.3s ease;
+        }
+
+        .cert-card:hover .cert-btn {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .cert-btn:hover {
+            background: var(--accent);
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR (replace with your navbar) -->
+    <header class="nav">
+        <div class="brand">Rishika<span class="dot">.</span></div>
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="index2.html">Projects</a>
+            <a href="certificates.html">Certificates</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle"><span id="theme-icon">🌙</span></button>
+    </header>
+
+    <section class="cert-page">
+        <h1 class="cert-title">Certificates</h1>
+        <p class="cert-sub">A curated collection of professional certifications earned across multiple fields.</p>
+
+        <div class="cert-grid">
+
+            <!-- 1 -->
+            <a href="https://coursera.org/share/83f0b3aed169b042cb54365b4e02999b" target="_blank" class="cert-card">
+                <div class="cert-title-text">Social Media Marketing in Practice</div>
+                <div class="cert-org">Digital Marketing Institute</div>
+                <button class="cert-btn">View Certificate</button>
+            </a>
+
+            <!-- 2 -->
+            <a href="https://coursera.org/share/0f0df75e4b8fc54a9455b1dcc2a620c6" target="_blank" class="cert-card">
+                <div class="cert-title-text">Finance for Everyone</div>
+                <div class="cert-org">McMaster University</div>
+                <button class="cert-btn">View Certificate</button>
+            </a>
+
+            <!-- 3 -->
+            <a href="https://coursera.org/share/415abcd4df92514d3f9c4fdaf5e68c56" target="_blank" class="cert-card">
+                <div class="cert-title-text">Protecting Business Innovation</div>
+                <div class="cert-org">The Hong Kong University of Science and Technology</div>
+                <button class="cert-btn">View Certificate</button>
+            </a>
+
+            <!-- 4 -->
+            <a href="https://coursera.org/share/99d099809e369aa61524847cfd92c4fd" target="_blank" class="cert-card">
+                <div class="cert-title-text">Introductory C Programming</div>
+                <div class="cert-org">Duke University</div>
+                <button class="cert-btn">View Certificate</button>
+            </a>
+
+            <!-- 5 -->
+            <a href="https://www.coursera.org/account/accomplishments/specialization/QX7JDR10W1QU" target="_blank" class="cert-card">
+                <div class="cert-title-text">Meta Marketing Analytics (Specialization)</div>
+                <div class="cert-org">Meta</div>
+                <button class="cert-btn">View Certificate</button>
+            </a>
+
+        </div>
+    </section>
+
+    <footer class="footer">© 2025 Rishika Sharma</footer>
+
+    <!-- DARK/LIGHT TOGGLE SCRIPT -->
+    <script>
+        const root = document.documentElement;
+        const icon = document.getElementById("theme-icon");
+
+        if (localStorage.getItem("theme") === "light") {
+            root.classList.add("light");
+            icon.textContent = "☀️";
+        }
+
+        document.getElementById("theme-toggle").onclick = () => {
+            root.classList.toggle("light");
+            const light = root.classList.contains("light");
+            icon.textContent = light ? "☀️" : "🌙";
+            localStorage.setItem("theme", light ? "light" : "dark");
+        };
+    </script>
+
+</body>
+</html>
